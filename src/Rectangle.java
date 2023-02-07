@@ -18,6 +18,10 @@ public class Rectangle { //make public for CS A
     private double perimeter;
 
     //default constructor (make public for CS A)
+
+    /**
+     * @description Default constructor that creates a square with width 1 and height 1
+     */
     public Rectangle(){
         width = 1.0;
         height = 1.0;
@@ -65,6 +69,13 @@ public class Rectangle { //make public for CS A
         return height;
     }
 
+    public double getArea(){
+        return area;
+    }
+
+    public double getPerimeter(){
+        return perimeter;
+    }
 
     //mutators
 
@@ -77,9 +88,27 @@ public class Rectangle { //make public for CS A
         width = newWidth;
     }
 
+    /**
+     * Modifies the height of the rectangle
+     * @param newHeight
+     */
+    public void setHeight(double newHeight){
+        height = newHeight;
+    }
+
     //other methods
 
+    /**
+     * Calculates the area of the rectangle
+     * @return area of the rectangle
+     */
+    public void calculateArea(){
+        area = height*width;
+    }
 
+    public void calculatePerimeter(){
+        perimeter =  2*height + 2*width;
+    }
 
 
     //toString method
